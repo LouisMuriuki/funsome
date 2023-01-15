@@ -1,15 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import CharadesStack from '../CharadesStack';
-import QuestionsStack from '../QuestionsStack';
+import Charades from '../../screens/Charades';
+import Questions from '../../screens/Questions';
 
 const Tab=createBottomTabNavigator();
 const BottomNav = () => {
   return (
-    <Tab.Navigator >
-        <Tab.Screen name="Charades" component={CharadesStack}/>
-        <Tab.Screen name="Questions" component={QuestionsStack}/>
+    <Tab.Navigator screenOptions={{ headerShown: false }} >
+        <Tab.Screen name="charedes" component={Charades} />
+        <Tab.Screen name="questions" component={Questions}/>
     </Tab.Navigator>
   )
 }

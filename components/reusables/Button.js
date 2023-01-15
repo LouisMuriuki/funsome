@@ -84,3 +84,4 @@ const Button = ({
     </View>
   );
 };
+export default Button

@@ -2,15 +2,15 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { createStackNavigator } from "@react-navigation/stack";
 import DrawerNavigation from './DrawerNavigation';
-import BottomNav from './BottomNav';
+import HomeStack from '../HomeStack';
 
 const Stack = createStackNavigator();
 
 const MainStack = () => {
   return (
-    <Stack.Navigator initialRouteName='Home' screenOptions={{headerShown: false}}>
+    <Stack.Navigator initialRouteName='Welcome' screenOptions={{headerShown: false}}>
         <Stack.Screen name="Welcome" component={DrawerNavigation}/>
-        <Stack.Screen name="Home" component={BottomNav}/>
+        <Stack.Screen name="Home" component={HomeStack}/>
     </Stack.Navigator>
     
   )
